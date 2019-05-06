@@ -1,0 +1,53 @@
+<div cdkDropListGroup>
+  <div class="example-container">
+    <div
+      cdkDropList
+      [cdkDropListData]="todo"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div 
+      class="example-box" 
+      *ngFor="let item of tab1" 
+      cdkDrag
+      [ngClass]="{'redItem': item == '1'}">{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <div
+      cdkDropList
+      [cdkDropListData]="tab1"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of tab2" cdkDrag
+      [ngClass]="{'greenItem': item == '2'}">{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <div
+      cdkDropList
+      [cdkDropListData]="tab2"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of tab3" cdkDrag
+      [ngClass]="{'blueItem': item == '3'}">{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <div
+      cdkDropList
+      [cdkDropListData]="tab4"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of tab4" cdkDrag
+      [ngClass]="{'yellowItem': item == '4'}">{{item}}</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Copyright 2019 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
